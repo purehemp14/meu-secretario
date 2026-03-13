@@ -202,4 +202,5 @@ setInterval(async () => {
 }, 60000);
 
 app.get("/", (_, res) => res.send("🤖 Meu Secretário online!"));
-app.listen(process.env.PORT || 3000, () => console.log("✅ Servidor rodando!"));
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, "0.0.0.0", () => console.log(`✅ Servidor rodando na porta ${PORT}!`));
